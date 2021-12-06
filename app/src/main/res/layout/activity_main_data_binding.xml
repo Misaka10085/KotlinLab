@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="idolBean"
+            type="com.misakanetwork.kotlinlab.jetpack.bean.IdolBean" />
+
+        <variable
+            name="eventHandler"
+            type="com.misakanetwork.kotlinlab.jetpack.listener.MainDataBindingHandleListener" />
+
+        <!-- 声明网络图片方法所需参数 -->
+        <variable
+            name="networkImage"
+            type="String" />
+
+        <variable
+            name="smallNetImage"
+            type="Boolean" />
+
+        <variable
+            name="defaultHolder"
+            type="int" />
+        <!-- end -->
+
+        <!-- 双向绑定，DataBinding及时setValue进UserBean，根据userBean.userName及时变化控件 -->
+        <variable
+            name="userViewModel"
+            type="com.misakanetwork.kotlinlab.jetpack.activity.viewmodel.UserViewModel" />
+        <!-- end -->
+
+        <import type="com.misakanetwork.kotlinlab.jetpack.utils.StarUtils" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:default="@{defaultHolder}"
+            app:image="@{networkImage}"
+            app:small="@{smallNetImage}" />
+        <!-- app:image 对应DataBindingImageLoadAdapter注解的"image"参数 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{idolBean.name}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@{StarUtils.getStar(idolBean.star)}" />
+        <!-- 在xml中DataBinding使用工具类 -->
+        <!-- 要在kotlin中xml调用object类的方法，需要在对应方法上添加@JvmStatic -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{eventHandler.onLikeClick}"
+            android:text="Like" />
+        <!-- 声明点击事件处理类变量，xml onClick调用方法其处理点击事件 -->
+
+        <!-- include layout内共用数据 -->
+        <include
+            layout="@layout/layout_main_data_binding_inside"
+            app:idolBean="@{idolBean}" />
+        <!-- app:对象名=对象，将对象传入include -->
+
+        <!-- 双向绑定@={} -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="input your name"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:singleLine="true"
+            android:text="@={userViewModel.userName}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <!-- end -->
+    </LinearLayout>
+</layout>

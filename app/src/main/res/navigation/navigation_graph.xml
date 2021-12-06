@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/navigationHomeFragment">
+
+    <fragment
+        android:id="@+id/navigationHomeFragment"
+        android:name="com.misakanetwork.kotlinlab.jetpack.fragment.NavigationHomeFragment"
+        android:label="NavigationHomeFragment"
+        tools:layout="@layout/fragment_navigation_home">
+
+        <action
+            android:id="@+id/action_navigationHomeFragment_to_navigationDetailFragment"
+            app:destination="@id/navigationDetailFragment"
+            app:enterAnim="@anim/popup_enter_bottom_anim"
+            app:exitAnim="@anim/popup_exit_bottom_anim" />
+
+        <argument
+            android:name="userName"
+            android:defaultValue="unknown"
+            app:argType="string" />
+
+        <argument
+            android:name="age"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <argument
+            android:name="idol"
+            android:defaultValue="@null"
+            app:argType="com.misakanetwork.kotlinlab.jetpack.bean.IdolBean"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationDetailFragment"
+        android:name="com.misakanetwork.kotlinlab.jetpack.fragment.NavigationDetailFragment"
+        android:label="NavigationDetailFragment"
+        tools:layout="@layout/fragment_navigation_detail">
+
+        <action
+            android:id="@+id/action_navigationDetailFragment_to_navigationHomeFragment"
+            app:destination="@id/navigationHomeFragment"
+            app:enterAnim="@anim/anim_fade_in"
+            app:exitAnim="@anim/anim_fade_out" />
+
+        <deepLink app:uri="www.dongnaoedu.com/{params}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationSettingsFragment"
+        android:name="com.misakanetwork.kotlinlab.jetpack.fragment.NavigationSettingsFragment"
+        android:label="NavigationSettingsFragment" />
+</navigation>
