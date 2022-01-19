@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout-v26/fragment_live_data_use2.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout/activity_flow_app.xml" value="0.3" />
         <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout/activity_main.xml" value="0.26614583333333336" />
         <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout/activity_main_coroutine.xml" value="0.2760416666666667" />
         <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout/activity_main_data_binding.xml" value="0.19" />
@@ -16,6 +17,8 @@
         <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout/activity_navigation_use.xml" value="0.1" />
         <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout/activity_room_use.xml" value="0.2015625" />
         <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout/activity_vm_scope.xml" value="0.25815217391304346" />
+        <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout/fragment_flow_app_home.xml" value="0.3" />
+        <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout/fragment_flow_download.xml" value="0.2989583333333333" />
         <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout/fragment_live_data_use.xml" value="0.2515625" />
         <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout/fragment_live_data_use2.xml" value="0.2515625" />
         <entry key="..\:/AndroidStudio/MisakaNetwork/MisakaModel/KotlinLab/app/src/main/res/layout/fragment_navigation_detail.xml" value="0.25" />

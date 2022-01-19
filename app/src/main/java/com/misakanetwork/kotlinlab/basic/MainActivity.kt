@@ -526,7 +526,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         init {
-            // 初始化块 在构造函数中执行
+            // 初始化块 在构造函数前执行
 //            require(age > 0) { "age must be positive" }
 //            require(name.isNullOrEmpty()) { "player must have a name" }
         }
