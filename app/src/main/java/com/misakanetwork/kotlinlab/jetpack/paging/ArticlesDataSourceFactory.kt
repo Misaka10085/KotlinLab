@@ -10,9 +10,9 @@ import com.misakanetwork.kotlinlab.jetpack.bean.ArticleDataBean
  * class name：ArticlesDataSourceFactory
  * desc：ArticlesDataSourceFactory
  */
-class ArticlesDataSourceFactory : DataSource.Factory<Int?, ArticleDataBean>() {
+class ArticlesDataSourceFactory : DataSource.Factory<Int, ArticleDataBean>() {
 
-    override fun create(): DataSource<Int?, ArticleDataBean> {
+    override fun create(): DataSource<Int, ArticleDataBean> {
 //        return ArticlesPositionalDataSource()
         return ArticlesPageKeyedDataSource()
     }

@@ -38,14 +38,14 @@ class MainCoroutineActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_coroutine)
         name_tv.text = "Quin"
-//        compareEachOther()
-//        suspendAndResume()
-//        suspendAndBlock()
+        compareEachOther()
+        suspendAndResume()
+        suspendAndBlock()
 //        createByOriginalApi()
 //        dispatchers() // 调度器
 //        coroutineScopes() // 协程作用域
-//        mainScope()
-//        viewModelScope() // 协程(ViewModelScope)+Retrofit+ViewModel+LiveData+DataBinding
+        mainScope()
+        viewModelScope() // 协程(ViewModelScope)+Retrofit+ViewModel+LiveData+DataBinding
 //        coroutineLaunchAndAsync() // 网络请求等待、并发原理 runBlocking join await async组合并发
 //        startMode() // 启动模式
 //        scope() // 协程作用域与构建器
@@ -57,7 +57,8 @@ class MainCoroutineActivity : AppCompatActivity() {
 //        coldFlow()
 //        hotChannel() // 热流Channel
 //        concurrent() // 协程并发工具
-        flowApp() // flow+协程+ViewBinding+Navigation+Retrofit+Room+StateFlow
+        flowApp() // flow+协程+ViewBinding+LiveData/StateFlow+SharedFlow+Navigation+Retrofit+Room
+        paging3()
     }
 
     @SuppressLint("SetTextI18n,StaticFieldLeak")
@@ -1447,10 +1448,18 @@ class MainCoroutineActivity : AppCompatActivity() {
     }
     // ----------------------- End ----------------------- //
 
-    // ----------------------- flow+协程+ViewBinding+Navigation+Retrofit+Room+StateFlow ----------------------- //
+    // ----------------------- flow+协程+ViewBinding+LiveData/StateFlow+SharedFlow+Navigation+Retrofit+Room ----------------------- //
     private fun flowApp() {
         flow_app_bt.setOnClickListener {
             FlowAppActivity.startThis(this)
+        }
+    }
+    // ----------------------- End ----------------------- //
+
+    // ----------------------- paging3 ----------------------- //
+    private fun paging3() {
+        paging3_bt.setOnClickListener {
+
         }
     }
     // ----------------------- End ----------------------- //

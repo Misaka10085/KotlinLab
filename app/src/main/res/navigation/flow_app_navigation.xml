@@ -11,9 +11,37 @@
         <action
             android:id="@+id/action_flowAppHomeFragment_to_flowDownloadFragment"
             app:destination="@id/flowDownloadFragment" />
+        <action
+            android:id="@+id/action_flowAppHomeFragment_to_flowRoomFragment"
+            app:destination="@id/flowRoomFragment" />
+        <action
+            android:id="@+id/action_flowAppHomeFragment_to_flowRetrofitFragment"
+            app:destination="@id/flowRetrofitFragment" />
+        <action
+            android:id="@+id/action_flowAppHomeFragment_to_flowStateFlowFragment"
+            app:destination="@id/flowStateFlowFragment" />
+        <action
+            android:id="@+id/action_flowAppHomeFragment_to_flowSharedFlowFragment"
+            app:destination="@id/flowSharedFlowFragment" />
     </fragment>
     <fragment
         android:id="@+id/flowDownloadFragment"
         android:name="com.misakanetwork.kotlinlab.coroutine.fragment.FlowDownloadFragment"
         android:label="FlowDownloadFragment" />
+    <fragment
+        android:id="@+id/flowRoomFragment"
+        android:name="com.misakanetwork.kotlinlab.coroutine.fragment.FlowRoomFragment"
+        android:label="FlowRoomFragment" />
+    <fragment
+        android:id="@+id/flowRetrofitFragment"
+        android:name="com.misakanetwork.kotlinlab.coroutine.fragment.FlowRetrofitFragment"
+        android:label="FlowRetrofitFragment" />
+    <fragment
+        android:id="@+id/flowStateFlowFragment"
+        android:name="com.misakanetwork.kotlinlab.coroutine.fragment.FlowStateFlowFragment"
+        android:label="FlowStateFlowFragment" />
+    <fragment
+        android:id="@+id/flowSharedFlowFragment"
+        android:name="com.misakanetwork.kotlinlab.coroutine.fragment.FlowSharedFlowFragment"
+        android:label="FlowSharedFlowFragment" />
 </navigation>

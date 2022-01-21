@@ -11,7 +11,7 @@ import com.misakanetwork.kotlinlab.databinding.ActivityFlowAppBinding
  * on：2022/1/19
  * package：com.misakanetwork.kotlinlab.coroutine.activity
  * class name：FlowAppActivity
- * desc：flow+协程+ViewBinding+Navigation+Retrofit+Room+StateFlow
+ * desc：flow+协程+ViewBinding+LiveData/StateFlow+SharedFlow+Navigation+Retrofit+Room
  */
 class FlowAppActivity : AppCompatActivity() {
     private val mBinding: ActivityFlowAppBinding by lazy {

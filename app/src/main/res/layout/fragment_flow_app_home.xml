@@ -16,5 +16,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="flow download" />
+
+        <Button
+            android:id="@+id/flow_room_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="flow room" />
+
+        <Button
+            android:id="@+id/flow_retrofit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="flow retrofit" />
+
+        <Button
+            android:id="@+id/flow_state_flow_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="flow stateFlow" />
+
+        <Button
+            android:id="@+id/flow_shared_flow_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="flow sharedFlow" />
     </LinearLayout>
 </layout>

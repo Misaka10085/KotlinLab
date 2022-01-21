@@ -34,11 +34,25 @@ class FlowAppHomeFragment : Fragment() {
 
     override fun onAttach(context: Context) { // 代替onActivityCreated，需及时remove observer
         super.onAttach(context)
-        requireActivity().lifecycle.addObserver(object :DefaultLifecycleObserver{
+        requireActivity().lifecycle.addObserver(object : DefaultLifecycleObserver {
             override fun onCreate(owner: LifecycleOwner) {
                 super.onCreate(owner)
-                mBinding.flowDownloadBtn.setOnClickListener {
-                    findNavController().navigate(R.id.action_flowAppHomeFragment_to_flowDownloadFragment)
+                mBinding.apply {
+                    flowDownloadBtn.setOnClickListener {
+                        findNavController().navigate(R.id.action_flowAppHomeFragment_to_flowDownloadFragment)
+                    }
+                    flowRoomBtn.setOnClickListener {
+                        findNavController().navigate(R.id.action_flowAppHomeFragment_to_flowRoomFragment)
+                    }
+                    flowRetrofitBtn.setOnClickListener {
+                        findNavController().navigate(R.id.action_flowAppHomeFragment_to_flowRetrofitFragment)
+                    }
+                    flowStateFlowBtn.setOnClickListener {
+                        findNavController().navigate(R.id.action_flowAppHomeFragment_to_flowStateFlowFragment)
+                    }
+                    flowSharedFlowBtn.setOnClickListener {
+                        findNavController().navigate(R.id.action_flowAppHomeFragment_to_flowSharedFlowFragment)
+                    }
                 }
                 owner.lifecycle.removeObserver(this)
             }

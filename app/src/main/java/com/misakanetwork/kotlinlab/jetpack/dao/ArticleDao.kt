@@ -21,5 +21,5 @@ interface ArticleDao {
     fun clear()
 
     @Query("SELECT * FROM article")
-    fun articleList(): androidx.paging.DataSource.Factory<Int?, ArticleDataBean>
+    fun articleList(): androidx.paging.DataSource.Factory<Int, ArticleDataBean>
 }

@@ -70,6 +70,12 @@
             android:id="@+id/flow_app_bt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="flow+协程+ViewBinding+Navigation+Retrofit+Room+StateFlow" />
+            android:text="flow+协程+ViewBinding+LiveData/StateFlow+SharedFlow+Navigation+Retrofit+Room" />
+
+        <Button
+            android:id="@+id/paging3_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="paging3" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
